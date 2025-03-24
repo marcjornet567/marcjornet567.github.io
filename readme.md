@@ -14,4 +14,6 @@
   >[!WARNING]
   >AUN NO ESTA TERMINADO :)
 
-| - WAZA
+| WAZA | WAZITA | WAZON |
+|------|--------|-------|
+| 1 | 2 | SU |
