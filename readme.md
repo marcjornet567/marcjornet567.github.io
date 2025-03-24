@@ -14,6 +14,9 @@
   >[!WARNING]
   >AUN NO ESTA TERMINADO :)
 
+
+<!-- EJEMPLO DE COMO HACER UNA TABLA EN MARKDWON-->
+
 | WAZA | WAZITA | WAZON |
 |------|--------|-------|
 | 1 | 2 | SU |
