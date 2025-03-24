@@ -9,3 +9,7 @@
   Formulario de prueba
 - ## MiniJogo
   Formulario de una actividad de clase el cual pide un id
+
+
+  >[!WARNING]
+  >AUN NO ESTA TERMINADO :)
