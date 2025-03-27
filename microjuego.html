@@ -18,10 +18,12 @@
 			
 			let resultado = document.getElementById("resultaado");
 			
-			let button_input = document.getElementById("field");
-			button_input.value = "Guess! ("+Contador+")";
+			let buto = document.getElementById("field");
+			buto.value = "Adivina ("+Contador+")";
 			
-
+			if (Contador > IntentosMax){
+				buto.disabled = true;
+			}
 			if(mi_num > numero){
 				resultado.innerHTML = "<em class=\"error\">El numero es mas pequeño que "+mi_num+"</em>";
 				mi_num_input.classList.add("input-error"); 

@@ -58,17 +58,20 @@
 		
 	}
 	
+	
+	
 	/* Experimental */
 	
 	.input-error {
 		border: 5px solid red; /* Borde rojo en caso de error */
-		background-color: #fdd; /* Fondo ligeramente rojo  */
+		
+	}
+	.input-correct {
+		border: 5px solid green; /* Borde rojo en caso de error */
+		
 	}
 	
 	.win{
 		color:#00ff00;
 	}
-	.adivinaNUM{
-		border:4px solid purple;
-		text-align: center;
-	}
+	

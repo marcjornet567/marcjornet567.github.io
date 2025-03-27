@@ -4,6 +4,23 @@
 		<title>Kurapika~Contacto</title>
 		
 		<link rel="stylesheet" href="estilo.css" />
+		<script>
+	function Enviar() {
+		let nom = document.getElementById("campo-nombre");
+		let pass = document.getElementById("campo-pass");
+		let data = document.getElementById("campo-data");
+		let edad = document.getElementById("campo-edad");
+		let color = document.getElementById("campo-color");
+		
+		let valor_nom = nom.value; // Corregido, eliminados los paréntesis
+		
+		if (valor_nom == "") {
+			nom.classList.add("input-error"); // Añadir clase de error si está vacío
+		} else {
+			nom.classList.add("input-correct"); // Añadir clase de corrección si no está vacío
+		}
+	}
+</script>
 	</head>
 	<body>
 		<header>
@@ -27,7 +44,7 @@
 			<p><label for="campo-edad">Edad: </label><input type="number" name="edat" min="1" max="120" id="campo-edad" /></p>
 			<p><label for="campo-color">Color: </label><input type="color" name="color" id="campo-color" /></p>
 			<p><input type="checkbox" name="subscribe" id="campo-sub" /></p><label for="campo-sub">Acepto las condiciones de Privacidad</label>
-			<p><input type="submit" /></p>
+			<p><input type="submit" id="SUBMINT-Button" value="Envia" onclick="Enviar()" /></p>
 		</form>
 		</main>
 	</body>
