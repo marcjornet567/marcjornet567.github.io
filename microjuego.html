@@ -4,11 +4,46 @@
 		<title>Kurapika~MiniJogo</title>
 		
 		<link rel="stylesheet" href="estilo.css" />
+		
+		<script>
+		let numero = Math.floor(Math.random()*100)+1;
+		let Contador = 0;
+		let IntentosMax = 10;
+		
+		function ComparaNum (){
+			Contador++;
+			
+			let mi_num_input = document.getElementById("numero");
+			let mi_num = mi_num_input.value;
+			
+			let resultado = document.getElementById("resultaado");
+			
+			let button_input = document.getElementById("field");
+			button_input.value = "Guess! ("+Contador+")";
+			
+
+			if(mi_num > numero){
+				resultado.innerHTML = "<em class=\"error\">El numero es mas pequeño que "+mi_num+"</em>";
+				mi_num_input.classList.add("input-error"); 
+			}
+			else if(mi_num < numero){
+				resultado.innerHTML = "<em class=\"error\">El numero es mas grande que "+mi_num+"</em>";
+				mi_num_input.classList.add("input-error"); 
+			}
+			else{
+				resultado.innerHTML = "<em class=\"win\">OLE OLE era "+mi_num+" Intentos: "+Contador+"</em>";
+				
+			}	
+			mi_num_input.value = "";
+			mi_num_input.focus();
+		}
+		
+		</script>
 	</head>
 	<body>
 		<header>
-		<h1>Minijogo</h1>
-			<nav>
+		<h1 class="diferenteTitulo">Minijogo</h1>
+			<nav class="navegacion">
 				<ul>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="CV.html">Cv</a></li>
@@ -21,8 +56,13 @@
 		</header>
 		<main>
 		<form>
-			<p><label for="Tu Numero">Tu número: </label><input type="number" name="id" id="numero" /></p>
-			<p><input type="submit" /></p>
+		<h2 class="adivinaNUM">ADIVINA EL NUMERO</h2>
+			<p>Adivina el numero entre <strong>1</strong> - <strong>100</strong></p>
+			
+			<p id = "resultaado"> Prueba suerte :)</p>
+			<p><label for="numero">Tu número: </label><input type="number" name="id" id="numero" /></p>
+			<p><input type="button" id="field" value="Adivina" onclick="ComparaNum()" /></p>
+			
 		</form>
 		</main>
 	</body>
